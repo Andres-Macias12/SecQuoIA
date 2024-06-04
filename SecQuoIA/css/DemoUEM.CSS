@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* Variables */
+:root {
+  --dark-one: #f6f6fc; /* Azul oscuro profundo */
+  --dark-two: #081b58; /* Azul cibernético profundo */
+  --main-color: #fcfcfc; /* Azul muy claro */
+  --secondary-color: #63b4f7; /* Rosa neón */
+  --light-one: linear-gradient(to right, #11b6e9, #0a4da5); /* Azul oscuro */
+  --light-two: #a1d9ff; /* Cian pastel a un tono más intenso */
+  --light-three: #fdfdfd; /* Blanco ligeramente gris */
+  --gradient-color: #011c3a; /* Azul eléctrico */
+  --soul-color: color; /* Blanco casi puro */
+  --bitad-one: linear-gradient(to right, #20c2f3, #c311f0); /* Gradiente de azul cian */
+  ---bitonisa-one: linear-gradient(to right, #0a0335, #05193f); /* Gradiente de azul cian */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+button, input, textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  background-color: var(--gradient-color);
+  color: var(--main-color);
+}
+
+input, textarea {
+  background-color: var(--dark-one);
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 92rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+/* Header */
+header nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: var(--gradient-color);
+  z-index: 50;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(255, 254, 254, 0.1);
+  transition: background 0.3s;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-de-links {
+  text-align: center;
+}
+
+.links a {
+  display: inline-block;
+  padding: 1rem 1rem;
+  color: var(--light-three);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s, background 0.3s;
+  margin-right: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.links a:hover,
+.links a:focus,
+.links a:active {
+  border-bottom: 2px solid var(--secondary-color);
+  color: var(--light-one);
+}
+
+.links a.active {
+  background-color: var(--secondary-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  padding: 0.9rem 2.1rem;
+}
+
+.links a.active:hover {
+  background-color: var(--highlight-color);
+}
+
+.hamburger-menu {
+  display: none; /* Cambiar según necesidad */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .links ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .links ul.active {
+    display: flex;
+  }
+  .links a {
+    padding: 1rem;
+    margin-right: 0;
+    text-align: center;
+    border-bottom: none;
+  }
+  .links a:hover,
+  .links a:focus,
+  .links a:active {
+    background-color: var(--secondary-color);
+    border-bottom: none;
+  }
+}
+
+/* Header Content */
+.header-content {
+    margin-top: 5rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/DemoUEM.png);
+    background-color: #011c3a;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* ajusta según sea necesario */
+    padding: 0 20px; /* ajusta según sea necesario */
+  }
+  
+  .header-content .container .image {
+    flex: 1;
+    max-width: 50%; /* ajusta según sea necesario */
+    padding: 0 10px; /* ajusta según sea necesario */
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  .header-content .container .text-content {
+    flex: 1;
+    max-width: 70%; /* ajusta según sea necesario */
+    padding: 0 10px; /* ajusta según sea necesario */
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    line-height: 0.9;
+    color: var(--light-three);
+    text-align: center; /* Añadido para centrar el título */
+  }
+  
+  .header-content .text {
+    margin: 2.4rem 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--main-color);
+    text-align: center; /* Añadido para centrar el texto */
+  }
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 8rem;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--highlight-color);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--light-two);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-header .text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title-sm {
+  color: var(--light-two);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/* Estilos para el botón */
+.btn {
+  background-color: var(--gradient-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--light-three);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Opcional: estilos adicionales para accesibilidad */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.5);
+}
+
+
+/* Formulario de Solicitud de Demostración */
+#solicitud {
+    background-color: #011c3a;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 254, 254, 0.8);
+}
+
+#solicitud h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#solicitud form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #f1f1f1;
+}
+
+#solicitud form input,
+#solicitud form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0a0303;
+    border-radius: 4px;
+    background-color: #fffdfd;
+    color: #f1f1f1;
+    font-size: 1rem;
+}
+
+#solicitud form button {
+    width: 50%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #00c6ff;
+    color: #fffdfd;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Agrega un margen superior de 10px */
+}
+
+#solicitud form button:hover {
+    background-color: #009ecf;
+}
+
+p {
+    font-size: 19px; /* Tamaño de fuente */
+    color: #fdfdfd; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Ajusta según sea necesario */
+  }
+  
+ 
+/* Sección pie de página */
+
+.footer {
+  background: #011c3a;
+  color: #f5f5f5;
+  padding: 4rem 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.grid-4-col {
+  padding: 0 1.5rem;
+}
+
+.title-sm {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.text {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a,
+.footer-services a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-services a:hover {
+  color: #00aaff;
+}
+
+.footer-input-wrap {
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #f5f1f1;
+}
+
+.footer-input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  color: #f5f5f5;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-arrow {
+  background-color: #00aaff;
+  border: none;
+  padding: 0 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-arrow:hover {
+  background-color: #0077cc;
+}
+
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #333;
+  width: 100%;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-media a {
+  color: #00aaff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #0077cc;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+.luky {
+  display: block;             /* Centra la imagen horizontalmente */
+  margin: 0 auto;             /* Asegura que la imagen esté centrada */
+  max-width: 100%;            /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto;               /* Mantiene la proporción de la imagen */
+  padding: 1rem;              /* Espacio alrededor de la imagen */
+  border-radius: 10px;        /* Esquinas redondeadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.luky:hover {
+  transform: scale(1.05);     /* Aumenta ligeramente el tamaño al pasar el mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para un efecto de elevación */
+}
+
+/* Fin Sección pie de página */

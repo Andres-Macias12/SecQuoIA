@@ -1,0 +1,103 @@
+@media (max-width: 1200px) {
+  /* Aquí puedes ajustar los estilos para pantallas grandes (desktops, laptops) */
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Aquí puedes ajustar los estilos para pantallas medianas (tablets en modo landscape, pantallas pequeñas de laptops) */
+  .container {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Aquí puedes ajustar los estilos para pantallas pequeñas (tablets en modo portrait, grandes smartphones) */
+  .container {
+    max-width: 80%;
+    padding: 0 2rem;
+  }
+
+  .header-content {
+    height: 500px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-content .text {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 4rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Aquí puedes ajustar los estilos para pantallas muy pequeñas (smartphones en modo portrait) */
+  .container {
+    max-width: 75%;
+    padding: 0 1rem;
+  }
+
+  .header-content {
+    height: 400px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-content .text {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+}
+
+/* Media queries para hacer el sitio responsive */
+@media (max-width: 1200px) {
+  /* Aquí puedes ajustar los estilos para pantallas grandes (desktops, laptops) */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Aquí puedes ajustar los estilos para pantallas pequeñas (tablets en modo portrait, grandes smartphones) */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
